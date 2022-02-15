@@ -12,7 +12,7 @@ namespace Juego_de_GO
         {
             int dimension = 10;
             string[,] tablero = tablaInicial(dimension);
-            for (int i=0; i<5; i++)
+            for (int i=0; i<13; i++)
             {
                 Console.ForegroundColor= ConsoleColor.White;
             PrintTabla(tablero);
@@ -71,7 +71,7 @@ namespace Juego_de_GO
             int ValorInputX = int.Parse(Console.ReadLine());
             Console.WriteLine("\nEscoje un valor entre 0 y " + (tablaPrecedente.GetLength(0) - 1) + " para el eje Y");
             int ValorInputY = int.Parse(Console.ReadLine());
-            if  (ValorInputX > (tablaPrecedente.GetLength(0) - 1) && ValorInputY > (tablaPrecedente.GetLength(0) - 1))
+            if  (ValorInputX > (tablaPrecedente.GetLength(0) - 1) || ValorInputY > (tablaPrecedente.GetLength(0) - 1))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Te has ido de los parametros del juego");
